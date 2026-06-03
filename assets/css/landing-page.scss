@@ -1,0 +1,268 @@
+/* Configurações Globais e Variáveis de Cor (para fácil manutenção) */
+body {
+  --primary-bg: #86868E;
+  --gray-bg: #f5f5f5;
+  --medium-gray-bg: #e0e0e0;
+  --text-dark: #333;
+  --text-light: #fff;
+  --text-gray: #6d6d78;
+  --button-cta-gray: #3035D1; /* Cinza do vídeo */
+  --button-hover: #3035D1;
+  
+  display: block;
+  font-family: 'font-normal', sans-serif;
+  color: var(--text-dark);
+}
+
+/* Layout Utilitário */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-inline: clamp(20px, 5vw, 80px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text-center { text-align: center; }
+
+/* Estilos do Cabeçalho (Toolbar) */
+.header-toolbar {
+  height: 80px;
+  color: var(--text-dark);
+  position: relative;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #555; /* Cor cinza escura do logo */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link-item {
+  color: #333; /* Texto escuro */
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  border-radius: 4px;
+}
+
+.nav-link-item.mat-mdc-button-base:hover {
+  background-color: rgba(0, 0, 0, 0.04); /* Corrigido de 3035D1 para rgba */
+}
+
+.expand-icon {
+  font-size: 18px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.action-button {
+  text-transform: none;
+  font-weight: 500;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.action-button.outlined {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #333;
+}
+
+.action-button.outlined:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Menu Customizado (Dropdown) */
+.custom-nav-menu .mat-mdc-menu-content {
+  background-color: #fcfcfc;
+  padding: 10px;
+}
+
+.custom-nav-menu button.mat-mdc-menu-item {
+  font-size: 13px;
+  color: #333;
+  border-radius: 4px;
+}
+
+/* Garante que o menu pareça aberto ao passar o mouse */
+.nav-link-item.mat-menu-trigger-active {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Estilos de Seção Gerais */
+.section {
+  padding: 80px 0;
+}
+
+.section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--text-gray);
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 15px;
+}
+
+.section-gray { background-color: var(--gray-bg); }
+.section-light { background-color: var(--primary-bg); }
+.section-medium-gray { background-color: var(--medium-gray-bg); }
+.section-medium-gray-rodape { background-color: var(--background-rodape); }
+.section-gray-header { background-color: var(#939398 0% 0% no-repeat padding-box); }
+
+/* Grades de Cards (Layout) */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Estilos do Material Card */
+.info-card {
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.info-card mat-card-header { padding: 0; margin-bottom: 16px; }
+.info-card mat-card-title { font-size: 20px; font-weight: 600; margin: 0; }
+.info-card mat-card-content { padding: 0; color: var(--text-gray); font-size: 14px; margin-bottom: 24px; }
+.info-card mat-card-actions { padding: 0; }
+
+/* Destaque para o card central das ferramentas */
+.tools-grid .highlight-card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Card do Cobalt Club (Largo) */
+.full-width-card {
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--primary-bg);
+  border: 1px solid #e0e0e0;
+}
+
+.club-card h3 { margin-bottom: 8px; font-weight: 600;}
+.club-card p { color: var(#FFFFFF 0% 0% no-repeat padding-box); margin: 0; font-size: 14px;}
+
+.horizontal-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 30px !important;
+}
+
+/* Botão CTA Cinza */
+.cta-button-gray {
+  background-color: var(--button-cta-gray) !important;
+  color: var(--text-light);
+  text-transform: none;
+  font-weight: 500;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 8px;
+}
+
+.cta-button-gray:hover {
+  background-color: var(--button-hover);
+}
+
+/* Botões de Ação na seção Inferior */
+.action-buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.large-button {
+  height: 54px;
+  padding: 0 40px;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.stroked-button-black {
+  border: 1px solid #333 !important;;
+  color: #333 !important;;
+  background-color: transparent;
+}
+
+.stroked-button-black:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Selos e Regulamentação */
+.regulation-section h2 { font-size: 22px; margin-bottom: 10px;}
+.regulation-section p { font-size: 15px; color: #666; margin-bottom: 40px;}
+
+.seal-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.seal-button {
+  background-color: #fff;
+  color: #333;
+  height: 50px;
+  width: 110px;
+  border-radius: 8px;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.seal-button.highlight-seal:hover,
+.seal-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Rodapé */
+.footer {
+  padding: 60px 0;
+  border-top: 1px solid #d5d5d5;
+}
+
+.footer-text {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--text-gray);
+  margin: 0;
+}
