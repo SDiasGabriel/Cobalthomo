@@ -167,6 +167,8 @@ body {
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  /* 🔥 ESSENCIAL */
 }
 
 /* Estilos do Material Card */
@@ -175,6 +177,13 @@ body {
   padding: 20px;
   text-align: left;
   border: 1px solid #e0e0e0;
+
+  display: flex;
+  /* 🔥 */
+  flex-direction: column;
+  /* 🔥 */
+  height: 100%;
+  /* 🔥 */
 }
 
 .info-card mat-card-header {
@@ -193,10 +202,15 @@ body {
   color: var(--text-gray);
   font-size: 14px;
   margin-bottom: 24px;
+
+  flex-grow: 1;
+  /* 🔥 empurra o botão pra baixo */
 }
 
 .info-card mat-card-actions {
   padding: 0;
+  margin-top: auto;
+  /* 🔥 cola no final */
 }
 
 /* Destaque para o card central das ferramentas */
@@ -290,7 +304,7 @@ body {
 .seal-row {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 164px;
 }
 
 .seal-button {
